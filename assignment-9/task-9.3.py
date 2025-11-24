@@ -1,129 +1,157 @@
-"""A simple calculator module with basic arithmetic operations.
-
-This module provides functions to perform addition, subtraction,
-multiplication, and division. Each function is designed to handle
-numeric inputs (integers or floats) and includes detailed documentation
-on its usage, parameters, and return values.
-
-Functions
----------
-add(a, b)
-    Computes the sum of two numbers.
-subtract(a, b)
-    Computes the difference between two numbers.
-multiply(a, b)
-    Computes the product of two numbers.
-divide(a, b)
-    Computes the division of two numbers, with handling for division by zero.
-"""
-
-from typing import Union
-
-Numeric = Union[int, float]
-
-def add(a: Numeric, b: Numeric) -> Numeric:
-    """Computes the sum of two numbers.
+def add(a, b):
+    """
+    Add two numbers and return the result.
 
     Parameters
-    ----------
-    a : int or float
-        The first number.
-    b : int or float
-        The second number.
+    a & b -> either float or int
 
     Returns
-    -------
-    int or float
-        The sum of `a` and `b`.
+    The sum of both inputs.
     """
     return a + b
 
-def subtract(a: Numeric, b: Numeric) -> Numeric:
-    """Computes the difference between two numbers.
+
+def subtract(a, b):
+    """
+    Subtract from the first and return the result.
 
     Parameters
-    ----------
-    a : int or float
-        The number to be subtracted from.
-    b : int or float
-        The number to subtract.
+    a & b -> either float or int
 
     Returns
-    -------
-    int or float
-        The result of `a` minus `b`.
+
+    The result of `a - b`.
     """
     return a - b
 
-def multiply(a: Numeric, b: Numeric) -> Numeric:
-    """Computes the product of two numbers.
+
+def multiply(a, b):
+    """
+    Multiply two numbers and return the result.
+
+    Parameters
+    a & b -> either float or int
+
+    Returns
+    The product of the two inputs.
+    """
+    return a * b
+
+
+def divide(a, b):
+    """
+    Divide by the second and return the result.
+
+    Parameters
+    a & b -> either float or int
+
+    Returns
+    The result of `a / b` if valid, otherwise None.
+    """
+    if b == 0:
+        print("Error: Cannot divide by zero.")
+        return None
+    return a / b
+
+"""AI-generated arithmetic helper functions for Assignment 9."""
+
+
+def ai_add(a, b):
+    """
+    Compute the sum of two numeric values.
 
     Parameters
     ----------
     a : int or float
-        The first number.
+        First operand.
     b : int or float
-        The second number.
+        Second operand.
 
     Returns
     -------
     int or float
-        The product of `a` and `b`.
+        The sum ``a + b``.
     """
-    return a * b
+    return a + b
 
-def divide(a: Numeric, b: Numeric) -> float:
-    """Computes the division of two numbers.
 
-    This function divides the first number by the second. It includes a
-    check to prevent division by zero.
+def ai_subtract(a, b):
+    """
+    Compute the difference between two numeric values.
 
     Parameters
     ----------
     a : int or float
-        The numerator (dividend).
+        Minuend.
     b : int or float
-        The denominator (divisor).
+        Subtrahend.
 
     Returns
     -------
-    float
-        The result of `a` divided by `b`.
+    int or float
+        The result ``a - b``.
+    """
+    return a - b
 
-    Raises
-    ------
-    ValueError
-        If the divisor `b` is zero.
+
+def ai_multiply(a, b):
+    """
+    Compute the product of two numeric values.
+
+    Parameters
+    ----------
+    a : int or float
+        First operand.
+    b : int or float
+        Second operand.
+
+    Returns
+    -------
+    int or float
+        The product ``a * b``.
+    """
+    return a * b
+
+
+def ai_divide(a, b):
+    """
+    Compute the quotient of two numeric values.
+
+    Parameters
+    ----------
+    a : int or float
+        Dividend.
+    b : int or float
+        Divisor.
+
+    Returns
+    -------
+    float or None
+        The quotient ``a / b`` if ``b`` is non-zero, otherwise ``None``.
     """
     if b == 0:
-        raise ValueError("Cannot divide by zero.")
+        print("Error: Cannot divide by zero.")
+        return None
     return a / b
 
+
+
+# Main testing block
 if __name__ == "__main__":
-    # --- Example Usage ---
-    num1, num2 = 10, 5
+    # Demonstrating calculator functions with sample values
+    print("Manual functions:")
+    print("Add:", add(10, 5))
+    print("Subtract:", subtract(10, 5))
+    print("Multiply:", multiply(10, 5))
+    print("Divide:", divide(10, 5))
+    print("Divide by zero attempt:", divide(10, 0))
 
-    print(f"--- Simple Calculator Operations ---")
-    print(f"Numbers: {num1}, {num2}\n")
 
-    # Addition
-    sum_result = add(num1, num2)
-    print(f"Addition:       {num1} + {num2} = {sum_result}")
+    print("-" * 20)
+    print("AI-generated functions:")
 
-    # Subtraction
-    diff_result = subtract(num1, num2)
-    print(f"Subtraction:    {num1} - {num2} = {diff_result}")
-
-    # Multiplication
-    prod_result = multiply(num1, num2)
-    print(f"Multiplication: {num1} * {num2} = {prod_result}")
-
-    # Division
-    try:
-        quotient_result = divide(num1, num2)
-        print(f"Division:       {num1} / {num2} = {quotient_result}")
-        # Test division by zero
-        print(f"\nAttempting to divide by zero...")
-        divide(num1, 0)
-    except ValueError as e:
-        print(f"Error: {e}")
+    print("Add by AI:", ai_add(10, 5))
+    print("Subtract by AI:", ai_subtract(10, 5))
+    print("Multiply by AI:", ai_multiply(10, 5))
+    print("Divide by AI:", ai_divide(10, 5))
+    print("Divide by zero attempt by AI:", ai_divide(10, 0))
