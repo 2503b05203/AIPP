@@ -1,0 +1,215 @@
+from flask import Flask, render_template_string, request
+
+app = Flask(__name__)
+
+LOGIN_PAGE = """
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Info Portal</title>
+  <style>
+    :root {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background-color: #f7f9fb;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      color: #1f2933;
+    }
+
+    .site-header {
+      text-align: center;
+      padding: 2rem 1rem 1rem;
+    }
+
+    .site-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      padding: 1rem;
+      margin: 0 auto;
+      width: min(100%, 960px);
+      border-top: 1px solid #e1e5ea;
+      border-bottom: 1px solid #e1e5ea;
+      background: white;
+    }
+
+    .site-nav a {
+      text-decoration: none;
+      color: #1f2933;
+      padding: 0.5rem 1rem;
+      border-radius: 999px;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .site-nav a:hover,
+    .site-nav a:focus {
+      background: #1f7ae0;
+      color: white;
+    }
+
+    @media (max-width: 600px) {
+      .site-nav {
+        justify-content: flex-start;
+      }
+    }
+
+    .hero {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+    }
+
+    .hero-card {
+      max-width: 560px;
+      background: white;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 12px 32px rgba(15, 23, 42, 0.15);
+    }
+
+    .hero-card button {
+      margin-top: 1.5rem;
+      border: none;
+      border-radius: 999px;
+      padding: 0.85rem 1.75rem;
+      background: #1f7ae0;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .hero-card button:hover,
+    .hero-card button:focus {
+      background: #1557a8;
+      transform: translateY(-1px);
+    }
+
+    .site-footer {
+      background: #e7ebef;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.95rem;
+    }
+
+    .status {
+      margin-top: 1rem;
+      padding: 0.75rem 1rem;
+      border-radius: 12px;
+    }
+
+    .status.error {
+      background: #fee2e2;
+      color: #991b1b;
+    }
+
+    .status.success {
+      background: #dcfce7;
+      color: #166534;
+    }
+
+    form div {
+      margin-top: 1rem;
+      text-align: left;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.25rem;
+      font-weight: 600;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.75rem;
+      border-radius: 8px;
+      border: 1px solid #cfd8e3;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <h1>Student Info Portal</h1>
+  </header>
+
+  <nav class="site-nav">
+    <a href="#">Home</a>
+    <a href="#">Dashboard</a>
+    <a href="#">Courses</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <main class="hero">
+    <section class="hero-card">
+      <h2>Stay on top of your academic journey</h2>
+      <p>
+        Access dashboards, course schedules, and messaging tools from any device. 
+        The Student Info Portal keeps your assignments, grades, and announcements in one secure place.
+      </p>
+      {% if message %}
+        <div class="status {{ status_class }}">{{ message }}</div>
+      {% endif %}
+      <form id="login-form" method="post">
+        <div>
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" required>
+        </div>
+        <div>
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+        <button type="submit">Login</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 Student Info Portal. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+"""
+
+
+def _validate_credentials(payload):
+    """Ensure the username and password values are non-empty strings."""
+    username = (payload.get("username") or "").strip()
+    password = (payload.get("password") or "").strip()
+
+    if not username or not password:
+        return None, "Please enter both username and password."
+
+    return username, None
+
+
+@app.route("/", methods=["GET", "POST"])
+def login():
+    status_class = ""
+    message = ""
+
+    if request.method == "POST":
+        username, error = _validate_credentials(request.form)
+
+        if error:
+            status_class = "error"
+            message = error
+        else:
+            status_class = "success"
+            message = f"Welcome, {username}!"
+
+    return render_template_string(LOGIN_PAGE, message=message, status_class=status_class)
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
+
