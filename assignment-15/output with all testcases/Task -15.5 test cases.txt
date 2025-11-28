@@ -1,0 +1,176 @@
+Task -5 test cases
+
+(.venv) PS C:\Users\subha\Documents\m.tech\AIPP> & c:/Users/subha/Documents/m.tech/AIPP/.venv/Scripts/python.exe c:/Users/subha/Documents/m.tech/AIPP/assignment-15/task-15.5.py
+==================================================
+Running test cases...
+==================================================
+Test 1: File creation/append for valid city
+
+==================================================
+Weather Details (JSON):
+==================================================
+{
+    "coord": {
+        "lon": 79.5833,
+        "lat": 18
+    },
+    "weather": [
+        {
+            "id": 803,
+            "main": "Clouds",
+            "description": "broken clouds",
+            "icon": "04d"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 23.29,
+        "feels_like": 23.14,
+        "temp_min": 23.29,
+        "temp_max": 23.29,
+        "pressure": 1017,
+        "humidity": 56,
+        "sea_level": 1017,
+        "grnd_level": 985
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 3.3,
+        "deg": 22,
+        "gust": 4.01
+    },
+    "clouds": {
+        "all": 67
+    },
+    "dt": 1764305411,
+    "sys": {
+        "country": "IN",
+        "sunrise": 1764291306,
+        "sunset": 1764331467
+    },
+    "timezone": 19800,
+    "id": 1252948,
+    "name": "Warangal",
+    "cod": 200
+}
+==================================================
+
+Weather details have been appended to 'weather_details.txt'
+✓ Test 1 passed: File created and contains data
+
+Test 2: File append functionality
+
+==================================================
+Weather Details (JSON):
+==================================================
+{
+    "coord": {
+        "lon": 72.8479,
+        "lat": 19.0144
+    },
+    "weather": [
+        {
+            "id": 711,
+            "main": "Smoke",
+            "description": "smoke",
+            "icon": "50d"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 28.99,
+        "feels_like": 29.77,
+        "temp_min": 28.94,
+        "temp_max": 28.99,
+        "pressure": 1015,
+        "humidity": 51,
+        "sea_level": 1015,
+        "grnd_level": 1015
+    },
+    "visibility": 2100,
+    "wind": {
+        "speed": 3.6,
+        "deg": 100
+    },
+    "clouds": {
+        "all": 6
+    },
+    "dt": 1764305749,
+    "sys": {
+        "type": 1,
+        "id": 9052,
+        "country": "IN",
+        "sunrise": 1764293028,
+        "sunset": 1764332978
+    },
+    "timezone": 19800,
+    "id": 1275339,
+    "name": "Mumbai",
+    "cod": 200
+}
+==================================================
+
+Weather details have been appended to 'weather_details.txt'
+✓ Test 2 passed: File append works correctly
+
+Test 3: File contains valid JSON structure
+✓ Test 3 passed: File contains expected structure
+
+✅ All test cases passed!
+
+==================================================
+Example usage (interactive):
+==================================================
+Enter the city name: hyderabad
+
+==================================================
+Weather Details (JSON):
+==================================================
+{
+    "coord": {
+        "lon": 78.4744,
+        "lat": 17.3753
+    },
+    "weather": [
+        {
+            "id": 721,
+            "main": "Haze",
+            "description": "haze",
+            "icon": "50d"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 24.23,
+        "feels_like": 24.2,
+        "temp_min": 23.73,
+        "temp_max": 24.23,
+        "pressure": 1017,
+        "humidity": 57,
+        "sea_level": 1017,
+        "grnd_level": 953
+    },
+    "visibility": 3000,
+    "wind": {
+        "speed": 5.14,
+        "deg": 60
+    },
+    "clouds": {
+        "all": 20
+    },
+    "dt": 1764305393,
+    "sys": {
+        "type": 1,
+        "id": 9214,
+        "country": "IN",
+        "sunrise": 1764291508,
+        "sunset": 1764331797
+    },
+    "timezone": 19800,
+    "id": 1269843,
+    "name": "Hyderabad",
+    "cod": 200
+}
+==================================================
+
+Weather details have been appended to 'weather_details.txt'

@@ -1,0 +1,50 @@
+Task -4 test cases
+
+(.venv) PS C:\Users\subha\Documents\m.tech\AIPP> & c:/Users/subha/Documents/m.tech/AIPP/.venv/Scripts/python.exe c:/Users/subha/Documents/m.tech/AIPP/assignment-15/task-15.4.py
+==================================================
+Running test cases...
+==================================================
+Test 1: Valid city name execution
+
+City: Warangal
+Temperature: 23.29°C
+Humidity: 56%
+Weather Description: Broken Clouds
+
+✓ Test 1 passed: Function executed successfully for valid city
+
+Test 2: Different valid city names
+
+City: London
+Temperature: 9.48°C
+Humidity: 89%
+Weather Description: Overcast Clouds
+
+  ✓ london handled successfully
+
+City: Mumbai
+Temperature: 28.99°C
+Humidity: 51%
+Weather Description: Smoke
+
+  ✓ mumbai handled successfully
+
+City: Tokyo
+Temperature: 19.67°C
+Humidity: 35%
+Weather Description: Few Clouds
+
+  ✓ tokyo handled successfully
+✓ Test 2 passed: Multiple cities handled
+
+Test 3: Invalid city name handling
+Error: City not found. Please enter a valid city.
+✓ Test 3 passed: Invalid city handled gracefully
+
+✅ All test cases passed!
+
+==================================================
+Example usage (interactive):
+==================================================
+Enter the city name: & c:/Users/subha/Documents/m.tech/AIPP/.venv/Scripts/python.exe c:/Users/subha/Documents/m.tech/AIPP/assignment-15/task-15.5.py
+Error: City not found. Please enter a valid city.

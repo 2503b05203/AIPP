@@ -1,0 +1,67 @@
+Task -2 test cases
+
+(.venv) PS C:\Users\subha\Documents\m.tech\AIPP> & c:/Users/subha/Documents/m.tech/AIPP/.venv/Scripts/python.exe c:/Users/subha/Documents/m.tech/AIPP/assignment-15/task-15.2.py
+==================================================
+Running test cases...
+==================================================
+Test 1: Empty city name validation
+✓ Test 1 passed: ValueError raised for empty city name
+
+Test 2: Empty API key validation
+✓ Test 2 passed: ValueError raised for empty API key
+
+Test 3: Valid city name returns proper structure
+✓ Test 3 passed: Valid response structure
+
+✅ All test cases passed!
+
+==================================================
+Example usage:
+==================================================
+Weather Details (JSON):
+==================================================
+{
+    "coord": {
+        "lon": 79.5833,
+        "lat": 18
+    },
+    "weather": [
+        {
+            "id": 803,
+            "main": "Clouds",
+            "description": "broken clouds",
+            "icon": "04d"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 23.29,
+        "feels_like": 23.14,
+        "temp_min": 23.29,
+        "temp_max": 23.29,
+        "pressure": 1017,
+        "humidity": 56,
+        "sea_level": 1017,
+        "grnd_level": 985
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 3.3,
+        "deg": 22,
+        "gust": 4.01
+    },
+    "clouds": {
+        "all": 67
+    },
+    "dt": 1764305411,
+    "sys": {
+        "country": "IN",
+        "sunrise": 1764291306,
+        "sunset": 1764331467
+    },
+    "timezone": 19800,
+    "id": 1252948,
+    "name": "Warangal",
+    "cod": 200
+}
+==================================================

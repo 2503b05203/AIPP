@@ -1,0 +1,101 @@
+
+============================================================
+Timestamp: 2025-11-28 11:47:37
+City: warangal
+============================================================
+{
+    "coord": {
+        "lon": 79.5833,
+        "lat": 18
+    },
+    "weather": [
+        {
+            "id": 803,
+            "main": "Clouds",
+            "description": "broken clouds",
+            "icon": "04d"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 24.37,
+        "feels_like": 24.22,
+        "temp_min": 24.37,
+        "temp_max": 24.37,
+        "pressure": 1016,
+        "humidity": 52,
+        "sea_level": 1016,
+        "grnd_level": 984
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 2.92,
+        "deg": 32,
+        "gust": 3.27
+    },
+    "clouds": {
+        "all": 72
+    },
+    "dt": 1764310456,
+    "sys": {
+        "country": "IN",
+        "sunrise": 1764291306,
+        "sunset": 1764331467
+    },
+    "timezone": 19800,
+    "id": 1252948,
+    "name": "Warangal",
+    "cod": 200
+}
+============================================================
+
+============================================================
+Timestamp: 2025-11-28 11:47:37
+City: mumbai
+============================================================
+{
+    "coord": {
+        "lon": 72.8479,
+        "lat": 19.0144
+    },
+    "weather": [
+        {
+            "id": 711,
+            "main": "Smoke",
+            "description": "smoke",
+            "icon": "50d"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 30.99,
+        "feels_like": 31.68,
+        "temp_min": 30.94,
+        "temp_max": 30.99,
+        "pressure": 1015,
+        "humidity": 45,
+        "sea_level": 1015,
+        "grnd_level": 1014
+    },
+    "visibility": 2500,
+    "wind": {
+        "speed": 4.63,
+        "deg": 110
+    },
+    "clouds": {
+        "all": 21
+    },
+    "dt": 1764310046,
+    "sys": {
+        "type": 1,
+        "id": 9052,
+        "country": "IN",
+        "sunrise": 1764293028,
+        "sunset": 1764332978
+    },
+    "timezone": 19800,
+    "id": 1275339,
+    "name": "Mumbai",
+    "cod": 200
+}
+============================================================

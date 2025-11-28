@@ -1,0 +1,36 @@
+Task -3 test cases
+(.venv) PS C:\Users\subha\Documents\m.tech\AIPP> & c:/Users/subha/Documents/m.tech/AIPP/.venv/Scripts/python.exe c:/Users/subha/Documents/m.tech/AIPP/assignment-15/task-15.3.py
+==================================================
+Running test cases...
+==================================================
+Test 1: Empty city name validation
+✓ Test 1 passed: ValueError raised for empty city name
+
+Test 2: City name with whitespace
+✓ Test 2 passed: Whitespace handled correctly
+
+Test 3: Complete weather data structure
+✓ Test 3 passed: Complete data structure returned
+
+✅ All test cases passed!
+
+==================================================
+Example usage:
+==================================================
+
+============================================================
+           WEATHER DETAILS FOR WARANGAL, IN
+============================================================
+
+📍 Location: Warangal, IN
+🌡️  Temperature: 23.29°C
+🤔 Feels Like: 23.14°C
+📊 Temperature Range: 23.29°C - 23.29°C
+☁️  Condition: Broken Clouds
+💧 Humidity: 56%
+🌬️  Wind Speed: 3.3 m/s (Direction: 22°)
+📉 Pressure: 1017 hPa
+👁️  Visibility: 10.0 km
+☁️  Cloudiness: 67%
+============================================================
+

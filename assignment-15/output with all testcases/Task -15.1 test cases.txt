@@ -1,0 +1,25 @@
+Task -1 test cases
+
+PS C:\Users\subha\Documents\m.tech\AIPP> & c:/Users/subha/Documents/m.tech/AIPP/.venv/Scripts/Activate.ps1
+(.venv) PS C:\Users\subha\Documents\m.tech\AIPP> & c:/Users/subha/Documents/m.tech/AIPP/.venv/Scripts/python.exe c:/Users/subha/Documents/m.tech/AIPP/assignment-15/task-15.1.py
+{'coord': {'lon': 79.5833, 'lat': 18}, 'weather': [{'id': 803, 'main': 'Clouds', 'description': 'broken clouds', 'icon': '04d'}], 'base': 'stations', 'main': {'temp': 23.29, 'feels_like': 23.14, 'temp_min': 23.29, 'temp_max': 23.29, 'pressure': 1017, 'humidity': 56, 'sea_level': 1017, 'grnd_level': 985}, 'visibility': 10000, 'wind': {'speed': 3.3, 'deg': 22, 'gust': 4.01}, 'clouds': {'all': 67}, 'dt': 1764305411, 'sys': {'country': 'IN', 'sunrise': 1764291306, 'sunset': 1764331467}, 'timezone': 19800, 'id': 1252948, 'name': 'Warangal', 'cod': 200}
+{'coord': {'lon': 79.5833, 'lat': 18}, 'weather': [{'id': 803, 'main': 'Clouds', 'description': 'broken clouds', 'icon': '04d'}], 'base': 'stations', 'main': {'temp': 23.29, 'feels_like': 23.14, 'temp_min': 23.29, 'temp_max': 23.29, 'pressure': 1017, 'humidity': 56, 'sea_level': 1017, 'grnd_level': 985}, 'visibility': 10000, 'wind': {'speed': 3.3, 'deg': 22, 'gust': 4.01}, 'clouds': {'all': 67}, 'dt': 1764305411, 'sys': {'country': 'IN', 'sunrise': 1764291306, 'sunset': 1764331467}, 'timezone': 19800, 'id': 1252948, 'name': 'Warangal', 'cod': 200}
+
+==================================================
+Running test cases...
+==================================================
+Test 1: Valid city name
+{'coord': {'lon': 79.5833, 'lat': 18}, 'weather': [{'id': 803, 'main': 'Clouds', 'description': 'broken clouds', 'icon': '04d'}], 'base': 'stations', 'main': {'temp': 23.29, 'feels_like': 23.14, 'temp_min': 23.29, 'temp_max': 23.29, 'pressure': 1017, 'humidity': 56, 'sea_level': 1017, 'grnd_level': 985}, 'visibility': 10000, 'wind': {'speed': 3.3, 'deg': 22, 'gust': 4.01}, 'clouds': {'all': 67}, 'dt': 1764305411, 'sys': {'country': 'IN', 'sunrise': 1764291306, 'sunset': 1764331467}, 'timezone': 19800, 'id': 1252948, 'name': 'Warangal', 'cod': 200}
+✓ Test 1 passed
+
+Test 2: Temperature data in response
+{'coord': {'lon': -0.1257, 'lat': 51.5085}, 'weather': [{'id': 804, 'main': 'Clouds', 'description': 'overcast clouds', 'icon': '04n'}], 'base': 'stations', 'main': {'temp': 9.48, 'feels_like': 7.09, 'temp_min': 8.36, 'temp_max': 10.56, 'pressure': 1013, 'humidity': 89, 'sea_level': 1013, 'grnd_level': 1008}, 'visibility': 10000, 'wind': {'speed': 4.63, 'deg': 240}, 'clouds': {'all': 91}, 'dt': 1764305398, 'sys': {'type': 2, 'id': 2091269, 'country': 'GB', 'sunrise': 1764315589, 'sunset': 1764345453}, 'timezone': 0, 'id': 2643743, 'name': 'London', 'cod': 200}
+✓ Test 2 passed
+
+Test 3: Weather description in response
+{'coord': {'lon': 72.8479, 'lat': 19.0144}, 'weather': [{'id': 711, 'main': 'Smoke', 'description': 'smoke', 'icon': '50d'}], 'base': 'stations', 'main': {'temp': 28.99, 'feels_like': 29.77, 'temp_min': 28.94, 'temp_max': 28.99, 'pressure': 1015, 'humidity': 51, 'sea_level': 1015, 'grnd_level': 1015}, 'visibility': 2100, 'wind': {'speed': 3.6, 'deg': 100}, 'clouds': {'all': 6}, 'dt': 1764305749, 'sys': {'type': 1, 'id': 9052, 'country': 'IN', 'sunrise': 1764293028, 'sunset': 1764332978}, 'timezone': 19800, 'id': 1275339, 'name': 'Mumbai', 'cod': 200}
+✓ Test 3 passed
+
+✅ All test cases passed!
+
+
